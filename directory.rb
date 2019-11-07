@@ -107,8 +107,13 @@ def save_students
   file.close
 end
 
+<<<<<<< HEAD
 def load_students(filename = "students.csv")
   file = File.open(filename, "r")
+=======
+def load_students
+  file = File.open("students.csv", "r")
+>>>>>>> fde56507e2e12aa04a236884469d7a683a5a57db
   file.readlines.each { |line|
     name, cohort = line.chomp.split(",")
     @students << {name: name, cohort: cohort.to_sym}
@@ -116,6 +121,7 @@ def load_students(filename = "students.csv")
   file.close
 end
 
+<<<<<<< HEAD
 def try_load_students
   filename = ARGV.first # first argument from the command line
   return if filename.nil? # get out of the method if it isn't given
@@ -129,4 +135,6 @@ def try_load_students
 end
 
 try_load_students
+=======
+>>>>>>> fde56507e2e12aa04a236884469d7a683a5a57db
 interactive_menu
